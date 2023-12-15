@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "51167981699",
+    "project_id": "iot-frog-domo",
+    "storage_bucket": "iot-frog-domo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51167981699:android:84ccafcfb37fe08d8babb6",
+        "android_client_info": {
+          "package_name": "com.FrogDomo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBm-Omn4bCbM7lGz5x6m0cLV7r1QogHT8g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
