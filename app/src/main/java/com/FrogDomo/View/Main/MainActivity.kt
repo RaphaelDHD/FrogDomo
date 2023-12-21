@@ -1,4 +1,4 @@
-package com.FrogDomo
+package com.FrogDomo.View.Main
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.FrogDomo.R
 import com.FrogDomo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

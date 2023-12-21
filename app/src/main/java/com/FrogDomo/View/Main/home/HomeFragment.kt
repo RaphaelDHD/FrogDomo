@@ -1,4 +1,4 @@
-package com.FrogDomo.ui.home
+package com.FrogDomo.View.Main.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
