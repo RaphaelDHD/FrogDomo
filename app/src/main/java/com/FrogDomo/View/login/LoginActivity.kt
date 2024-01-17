@@ -7,8 +7,6 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.FrogDomo.R
-import com.FrogDomo.Model.LoginUser
-import com.FrogDomo.Repository.UserRepository
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
