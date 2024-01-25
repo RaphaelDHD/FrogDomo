@@ -15,10 +15,10 @@ object UserRepository {
     val currentUser = _currentUser
 
 
-    suspend fun login(email: String, password: String): User? {
+    /*suspend fun login(email: String, password: String): User? {
         val user = ApiClient.apiService.login(LoginRequest(email, password))
         return user.body()
-    }
+    }*/
 
     fun registerUserToSharedPreferences(context: Context, email: String) {
         val sharedPreferences: SharedPreferences = context.getSharedPreferences("SpizeurSharedPreference", Context.MODE_PRIVATE)

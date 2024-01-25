@@ -16,7 +16,7 @@ interface ApiService {
     suspend fun createUser(user: User)
 
     @POST("users/login")
-    suspend fun login(@Body loginRequest: LoginRequest): Response<User>
+    suspend fun login(@Body loginRequest: LoginRequest): Response<String>
 
     @PUT("users/{id}")
     suspend fun updateConfig(user: User)
