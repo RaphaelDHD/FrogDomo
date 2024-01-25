@@ -1,26 +1,33 @@
 package com.FrogDomo.View.login
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.FrogDomo.Model.LoginUser
-import com.FrogDomo.Model.User
-import com.FrogDomo.Repository.UserRepository
-import com.example.spizeur.domain.UserRepository
+import com.FrogDomo.api.ApiClient
+import com.FrogDomo.api.LoginRequest
 import kotlinx.coroutines.launch
 
-class LoginViewModel: ViewModel() {
-    fun loginUser(user: LoginUser): LiveData<User> {
-        var livedata = MutableLiveData<User>()
+class LoginViewModel : ViewModel() {
+    private val _loginResult = MutableLiveData<Boolean>()
+    val loginResult: LiveData<Boolean> get() = _loginResult
+
+    fun loginUser(email: String, password: String) {
         viewModelScope.launch {
-            val data = UserRepository.login(user)
-            data.collect {user->
-                livedata.postValue(user)
+            try {
+                val response = ApiClient.apiService.login(LoginRequest(email, password))
+                // Traitez la réponse en fonction de ce que votre API renvoie
+                if (response.isSuccessful) {
+                    Log.e("test", response.body().toString())
+                    _loginResult.postValue(true)
+                } else {
+                    _loginResult.postValue(false)
+                }
+            } catch (e: Exception) {
+                Log.e("test", e.toString())
+                _loginResult.postValue(false)
             }
-
         }
-
-        return livedata
     }
 }

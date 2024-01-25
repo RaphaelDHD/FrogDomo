@@ -9,7 +9,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 object ApiClient {
 
-    private const val BASE_URL: String = "localhost"
+    private var BASE_URL: String = ""
 
     private val gson : Gson by lazy {
         GsonBuilder().setLenient().create()
@@ -34,6 +34,9 @@ object ApiClient {
 
     val apiService : ApiService by lazy{
         retrofit.create(ApiService::class.java)
+    }
+    fun setUrl(url: String){
+        BASE_URL = url
     }
 
 }
