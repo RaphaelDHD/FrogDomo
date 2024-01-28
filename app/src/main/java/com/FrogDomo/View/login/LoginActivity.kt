@@ -1,5 +1,6 @@
 package com.FrogDomo.View.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
@@ -8,6 +9,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.FrogDomo.R
+import com.FrogDomo.View.Main.MainActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import org.w3c.dom.Text
@@ -58,9 +60,10 @@ class LoginActivity : AppCompatActivity() {
                 loginViewModel.loginUser(inputEmail.text.toString(), inputPassword.text.toString())
                 loginViewModel.loginResult.observe(this) { loginSuccess ->
                     if (loginSuccess) {
-                        // Connexion réussie, vous pouvez naviguer vers une autre activité ou terminer celle-ci
                         Toast.makeText(this, "OK", Toast.LENGTH_LONG).show()
-                        finish()
+                        // navigate to main activity
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
                     } else {
                         Toast.makeText(this, "Email ou mot de passe incorrect", Toast.LENGTH_LONG).show()
                     }

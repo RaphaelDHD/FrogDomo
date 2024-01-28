@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <corners android:radius="16dp"/> <!-- Ajustez la valeur du rayon selon vos besoins -->
+
+    <!-- Autres attributs si nécessaire, par exemple, pour la couleur de fond -->
+    <solid android:color="@color/secondaryContainer"/>
+</shape>

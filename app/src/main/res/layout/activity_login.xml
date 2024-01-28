@@ -26,7 +26,7 @@
             android:hint="ApiDomaine"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView">
+            app:layout_constraintTop_toBottomOf="@+id/BulbImage">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textInputChgAPIMdp"
@@ -45,7 +45,7 @@
             android:hint="Email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView">
+            app:layout_constraintTop_toBottomOf="@+id/BulbImage">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textInputChgMdp"
@@ -109,7 +109,7 @@
             app:layout_constraintTop_toBottomOf="@+id/bt_SeConnecter" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/BulbImage"
             android:layout_width="148dp"
             android:layout_height="147dp"
             android:layout_marginTop="32dp"
